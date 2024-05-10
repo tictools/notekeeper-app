@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-const RESORUCE_PATH = "notes";
-
 function App() {
+  const { API_BASE_URL, PACKAGE_VERSION } = import.meta.env;
+  const RESORUCE_PATH = "notes";
+
   console.log(import.meta.env.PACKAGE_VERSION);
   useEffect(() => {
     globalThis
@@ -11,7 +11,7 @@ function App() {
       .then((response) => response.json())
       .then((notes) => console.log(notes))
       .catch((error) => console.log(error));
-  }, []);
+  }, [API_BASE_URL]);
 
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
         <h2>
           A seamless app for organizing, managing, and accessing your notes.
         </h2>
-        <small>import.meta</small>
+        <small>{PACKAGE_VERSION}</small>
       </header>
     </>
   );
