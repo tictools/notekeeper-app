@@ -16,6 +16,9 @@ function App() {
     <>
       <header>
         <h1>Notekeeper</h1>
+        <h2>
+          A seamless app for organizing, managing, and accessing your notes.
+        </h2>
       </header>
     </>
   );
