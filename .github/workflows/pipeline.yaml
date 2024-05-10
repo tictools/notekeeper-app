@@ -37,4 +37,4 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: Lint code
-        run: bun run Lint
+        run: bun run lint
