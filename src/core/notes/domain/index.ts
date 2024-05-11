@@ -1,0 +1,1 @@
+// domain entry point
